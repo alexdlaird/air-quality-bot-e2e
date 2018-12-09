@@ -1,11 +1,8 @@
-import logging
 import unittest
 import os
 import time
 
 from twilio.rest import Client
-
-logger = logging.getLogger()
 
 class TestCase(unittest.TestCase):
 
@@ -20,14 +17,12 @@ class TestCase(unittest.TestCase):
 
         latest_message = None
         for message in self.client.messages.list(from_=os.environ.get("AIR_QUALITY_BOT_PHONE_NUMBER"), to=os.environ.get("TWILIO_E2E_FROM_PHONE_NUMBER"), date_sent=now.date()):
-            if message.direction != "inbound" or  message.date_created <= now:
+            if message.direction != "inbound" or  message.date_created < now:
                 continue
 
             latest_message = message
 
         if latest_message is None:
-            logger.info("Reply message not seen yet, retrying ...")
-
-            self.await_reply_message(now, text, retries + 1)
+            latest_message = self.await_reply_message(now, text, retries + 1)
 
         return latest_message

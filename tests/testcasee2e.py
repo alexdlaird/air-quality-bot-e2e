@@ -1,9 +1,12 @@
-import unittest
+import time
 import os
 
 from .testcase import TestCase
 
 class TestCaseE2E(TestCase):
+
+    def tearDown(self):
+        time.sleep(2)
 
     def test_text(self):
         text = "text"
