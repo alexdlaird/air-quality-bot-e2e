@@ -9,7 +9,7 @@ class TestCaseE2E(TestCase):
         text = "text"
 
         message = self.client.messages.create(
-            to=os.environ.get("TWILIO_AIR_QUALITY_PHONE_NUMBER"),
+            to=os.environ.get("AIR_QUALITY_BOT_PHONE_NUMBER"),
             from_=os.environ.get("TWILIO_E2E_FROM_PHONE_NUMBER"),
             body=text)
 
@@ -21,7 +21,7 @@ class TestCaseE2E(TestCase):
         text = "52328"
 
         message = self.client.messages.create(
-            to=os.environ.get("TWILIO_AIR_QUALITY_PHONE_NUMBER"),
+            to=os.environ.get("AIR_QUALITY_BOT_PHONE_NUMBER"),
             from_=os.environ.get("TWILIO_E2E_FROM_PHONE_NUMBER"),
             body=text)
 
@@ -33,7 +33,7 @@ class TestCaseE2E(TestCase):
         text = "94501"
 
         message = self.client.messages.create(
-            to=os.environ.get("TWILIO_AIR_QUALITY_PHONE_NUMBER"),
+            to=os.environ.get("AIR_QUALITY_BOT_PHONE_NUMBER"),
             from_=os.environ.get("TWILIO_E2E_FROM_PHONE_NUMBER"),
             body=text)
 
@@ -48,7 +48,7 @@ class TestCaseE2E(TestCase):
         text = "94501 map"
 
         message = self.client.messages.create(
-            to=os.environ.get("TWILIO_AIR_QUALITY_PHONE_NUMBER"),
+            to=os.environ.get("AIR_QUALITY_BOT_PHONE_NUMBER"),
             from_=os.environ.get("TWILIO_E2E_FROM_PHONE_NUMBER"),
             body=text)
 
