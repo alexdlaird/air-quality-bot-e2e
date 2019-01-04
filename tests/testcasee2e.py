@@ -3,6 +3,10 @@ import time
 
 from .testcase import TestCase
 
+__author__ = 'Alex Laird'
+__copyright__ = 'Copyright 2018, Alex Laird'
+__version__ = '0.0.1'
+
 
 class TestCaseE2E(TestCase):
     def tearDown(self):
