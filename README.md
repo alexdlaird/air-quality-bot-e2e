@@ -31,5 +31,5 @@ your `.env` file in the [Air Quality Bot](https://github.com/alexdlaird/air-qual
 repository. If they are set, E2E tests will automatically run after the
 `./deploy.sh` script is executed successfully.
 
-  - `TRAVIS_E2E_REPO` (something like `<USERNAME>%2Fair-quality-bot-e2e`, preserving the `%2F` instead of a `/`)
-  - `TRAVIS_ACCESS_TOKEN` (found [here](https://travis-ci.org/account/preferences))
+- `TRAVIS_E2E_REPO` (something like `<USERNAME>%2Fair-quality-bot-e2e`, preserving the `%2F` instead of a `/`)
+- `TRAVIS_ACCESS_TOKEN` (found [here](https://travis-ci.org/account/preferences))
