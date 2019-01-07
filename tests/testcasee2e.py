@@ -3,9 +3,9 @@ import time
 
 from .testcase import TestCase
 
-__author__ = 'Alex Laird'
-__copyright__ = 'Copyright 2018, Alex Laird'
-__version__ = '0.1.1'
+__author__ = "Alex Laird"
+__copyright__ = "Copyright 2018, Alex Laird"
+__version__ = "0.1.1"
 
 
 class TestCaseE2E(TestCase):
@@ -47,7 +47,7 @@ class TestCaseE2E(TestCase):
 
         message = self.await_reply_message(message.date_created, text)
 
-        self.assertEqual(message.num_media, '0')
+        self.assertEqual(message.num_media, "0")
         self.assertIn(" AQI of ", message.body)
         self.assertIn(" for Oakland at ", message.body)
         self.assertIn("Source: AirNow", message.body)
@@ -62,7 +62,7 @@ class TestCaseE2E(TestCase):
 
         message = self.await_reply_message(message.date_created, text)
 
-        self.assertEqual(message.num_media, '1')
+        self.assertEqual(message.num_media, "1")
         self.assertIn(" AQI of ", message.body)
         self.assertIn(" for Oakland at ", message.body)
         self.assertIn("Source: AirNow", message.body)
