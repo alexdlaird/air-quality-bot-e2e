@@ -1,6 +1,5 @@
-[![Build Status](https://travis-ci.org/alexdlaird/air-quality-bot-e2e.svg?branch=master)](https://travis-ci.org/alexdlaird/air-quality-bot-e2e)
+[![Build Status](https://travis-ci.com/alexdlaird/air-quality-bot-e2e.svg?branch=master)](https://travis-ci.com/alexdlaird/air-quality-bot-e2e)
 ![GitHub](https://img.shields.io/github/license/alexdlaird/air-quality-bot)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/alexdlaird)
 
 # Air Quality Bot E2E Tests
 
