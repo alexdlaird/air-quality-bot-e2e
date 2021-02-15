@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.com/alexdlaird/air-quality-bot-e2e.svg?branch=master)](https://travis-ci.com/alexdlaird/air-quality-bot-e2e)
-![GitHub](https://img.shields.io/github/license/alexdlaird/air-quality-bot)
+[![CI/CD](https://github.com/alexdlaird/air-quality-bot-e2e/workflows/CI/CD/badge.svg)](https://github.com/alexdlaird/air-quality-bot-e2e/actions?query=workflow%3ACI%2FCD)
+![GitHub License](https://img.shields.io/github/license/alexdlaird/air-quality-bot)
 
 # Air Quality Bot E2E Tests
 
