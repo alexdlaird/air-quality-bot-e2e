@@ -13,6 +13,12 @@ jobs:
   build:
     name: Build
 
+    env:
+      AIR_QUALITY_BOT_PHONE_NUMBER: ${{ secrets.AIR_QUALITY_BOT_PHONE_NUMBER }}
+      TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+      TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+      TWILIO_E2E_FROM_PHONE_NUMBER: ${{ secrets.TWILIO_E2E_FROM_PHONE_NUMBER }}
+
     runs-on: ubuntu-latest
 
     steps:
