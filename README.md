@@ -20,17 +20,14 @@ To run the tests, simply execute:
 make test
 ```
 
-## Travis Build
+## CI Build
 
-For the E2E tests to run in Travis, simply add the environment variables found
-in `.env` to the configuration for the Travis build. In Travis, you can also
+For the E2E tests to run in a CI system, simply add the environment variables found
+in `.env` to the configuration for the CI build. In the CI system, you can also
 set these E2E tests to run based on a cron schedule.
 
 In addition to running the E2E tests manually or on a schedule, you can trigger
 them to run after each deploy. To do this, simply add the following variables to
-your `.env` file in the [Air Quality Bot](https://github.com/alexdlaird/air-quality-bot/blob/master/.env.example)
+your `.env` file in the [Air Quality Bot](https://github.com/alexdlaird/air-quality-bot/blob/main/.env.example)
 repository. If they are set, E2E tests will automatically run after the
 `./deploy.sh` script is executed successfully.
-
-- `TRAVIS_E2E_REPO` (something like `<USERNAME>%2Fair-quality-bot-e2e`, preserving the `%2F` instead of a `/`)
-- `TRAVIS_ACCESS_TOKEN` (found [here](https://travis-ci.org/account/preferences))
