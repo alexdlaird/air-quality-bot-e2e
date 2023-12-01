@@ -27,7 +27,7 @@ class TestCaseE2E(TestCase):
                          "Send us a zip code and we'll reply with the area's Air Quality Index (AQI). Put \"map\" at the end and we'll include the regional map too.")
 
     def test_52328(self):
-        text = "52328"
+        text = "60098"
 
         message = self.client.messages.create(
             to=os.environ.get("AIR_QUALITY_BOT_PHONE_NUMBER"),
