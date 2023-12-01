@@ -11,8 +11,8 @@ on:
 
 
 jobs:
-  build:
-    name: Build
+  ci:
+    name: "CI Tests"
 
     env:
       AIR_QUALITY_BOT_PHONE_NUMBER: ${{ secrets.AIR_QUALITY_BOT_PHONE_NUMBER }}

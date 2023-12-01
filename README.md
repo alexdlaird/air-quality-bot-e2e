@@ -1,4 +1,4 @@
-[![CI Tests](https://github.com/alexdlaird/air-quality-bot-e2e/actions/workflows/build.yml/badge.svg)](https://github.com/alexdlaird/air-quality-bot-e2e/actions/workflows/build.yml)
+[![CI Tests](https://github.com/alexdlaird/air-quality-bot-e2e/actions/workflows/ci.yml/badge.svg)](https://github.com/alexdlaird/air-quality-bot-e2e/actions/workflows/ci.yml)
 ![GitHub License](https://img.shields.io/github/license/alexdlaird/air-quality-bot)
 
 # Air Quality Bot E2E Tests
