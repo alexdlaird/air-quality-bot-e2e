@@ -9,6 +9,8 @@ on:
     - cron: "0 18 * * *"
   workflow_dispatch:
 
+concurrency:
+  group: air-quality-bot-singleton-e2e-tests
 
 jobs:
   ci:
