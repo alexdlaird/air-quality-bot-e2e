@@ -13,6 +13,7 @@ class TestCaseE2E(TestCase):
     def tearDown(self):
         time.sleep(2)
 
+    @unittest.skipIf("TWILIO_AUTH_TOKEN" not in os.environ, "TWILIO_AUTH_TOKEN environment variable not set")
     def test_text(self):
         text = "text"
 
@@ -26,6 +27,7 @@ class TestCaseE2E(TestCase):
         self.assertEqual(message.body,
                          "Send us a zip code and we'll reply with the area's Air Quality Index (AQI). Put \"map\" at the end and we'll include the regional map too.")
 
+    @unittest.skipIf("TWILIO_AUTH_TOKEN" not in os.environ, "TWILIO_AUTH_TOKEN environment variable not set")
     def test_52328(self):
         text = "60098"
 
@@ -38,6 +40,7 @@ class TestCaseE2E(TestCase):
 
         self.assertEqual(message.body, "Sorry, AirNow data is unavailable for this zip code.")
 
+    @unittest.skipIf("TWILIO_AUTH_TOKEN" not in os.environ, "TWILIO_AUTH_TOKEN environment variable not set")
     def test_94501(self):
         text = "94501"
 
@@ -53,6 +56,7 @@ class TestCaseE2E(TestCase):
         self.assertIn(" for Oakland at ", message.body)
         self.assertIn("Source: AirNow", message.body)
 
+    @unittest.skipIf("TWILIO_AUTH_TOKEN" not in os.environ, "TWILIO_AUTH_TOKEN environment variable not set")
     def test_94501_map(self):
         text = "94501 map"
 

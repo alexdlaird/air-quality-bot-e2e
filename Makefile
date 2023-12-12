@@ -1,5 +1,6 @@
 .PHONY: all env install
 
+PYTHON_BIN := python3
 SHELL := /usr/bin/env bash
 
 all: env virtualenv install
@@ -7,10 +8,10 @@ all: env virtualenv install
 env:
 	cp -n .env.example .env | true
 
-virtualenv:
+virtualenv: env
 	@if [ ! -d ".venv" ]; then \
-		python3 -m pip install virtualenv --user; \
-		python3 -m virtualenv .venv; \
+		$(PYTHON_BIN) -m pip install virtualenv --user; \
+		$(PYTHON_BIN) -m virtualenv .venv; \
 	fi
 
 install: env virtualenv
