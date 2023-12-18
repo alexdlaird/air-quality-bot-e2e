@@ -1,2 +1,2 @@
 python-dotenv==1.0.0
-twilio==8.10.3
+twilio==8.11.0
