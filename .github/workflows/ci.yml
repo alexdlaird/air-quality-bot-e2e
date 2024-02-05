@@ -33,18 +33,3 @@ jobs:
         run: make install
       - name: Run tests
         run: make test
-
-  automerge:
-    name: "Auto Approve"
-    needs: ci
-    runs-on: ubuntu-latest
-
-    permissions:
-      pull-requests: write
-      contents: write
-
-    steps:
-      - uses: fastify/github-action-merge-dependabot@v3
-        with:
-          target: major
-          use-github-auto-merge: true
