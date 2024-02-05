@@ -1,5 +1,5 @@
 [![CI Tests](https://github.com/alexdlaird/air-quality-bot-e2e/actions/workflows/ci.yml/badge.svg)](https://github.com/alexdlaird/air-quality-bot-e2e/actions/workflows/ci.yml)
-![Python Versions](https://img.shields.io/badge/python-%203.6%20|%203.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11%20-blue)
+![Python Versions](https://img.shields.io/badge/python-%203.10%20|%203.11%20-blue)
 ![GitHub License](https://img.shields.io/github/license/alexdlaird/air-quality-bot)
 
 # Air Quality Bot E2E Tests
@@ -8,6 +8,10 @@ The [Air Quality Bot](https://github.com/alexdlaird/air-quality-bot) is
 generally available by texting a zip code (and optionally the word "map") to
 (415) 212-4229. This project runs end-to-end tests against the bot to ensure it
 is up and responding properly.
+
+## Prerequisites
+
+- Python (>= 3.10)
 
 ## Running Locally
 
