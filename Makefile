@@ -1,4 +1,4 @@
-.PHONY: all env install
+.PHONY: all env install nopyc clean test
 
 PYTHON_BIN := python3
 SHELL := /usr/bin/env bash
@@ -19,6 +19,13 @@ install: env virtualenv
 		source .venv/bin/activate; \
 		python -m pip install -r requirements.txt; \
 	)
+
+nopyc:
+	find . -name '*.pyc' | xargs rm -f || true
+	find . -name __pycache__ | xargs rm -rf || true
+
+clean: nopyc
+	rm -rf .venv
 
 test: env virtualenv
 	@( \
