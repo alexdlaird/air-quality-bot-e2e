@@ -1,11 +1,10 @@
+__copyright__ = "Copyright (c) 2018-2019 Alex Laird"
+__license__ = "MIT"
+
 import os
 import time
 import unittest
 from twilio.rest import Client
-
-__author__ = "Alex Laird"
-__copyright__ = "Copyright 2018, Alex Laird"
-__version__ = "0.1.1"
 
 
 class TestCase(unittest.TestCase):
