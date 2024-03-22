@@ -27,8 +27,8 @@ class TestCaseE2E(TestCase):
                          "Send us a zip code and we'll reply with the area's Air Quality Index (AQI). Put \"map\" at the end and we'll include the regional map too.")
 
     @unittest.skipIf("TWILIO_AUTH_TOKEN" not in os.environ, "TWILIO_AUTH_TOKEN environment variable not set")
-    def test_52328(self):
-        text = "60098"
+    def test_00000(self):
+        text = "00000"
 
         message = self.client.messages.create(
             to=os.environ.get("AIR_QUALITY_BOT_PHONE_NUMBER"),
