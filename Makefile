@@ -1,22 +1,21 @@
 .PHONY: all env install nopyc clean test
 
-PYTHON_BIN := python3
 SHELL := /usr/bin/env bash
+PYTHON_BIN ?= python
+PROJECT_VENV ?= venv
 
-all: env virtualenv install
+all: test
 
 env:
 	cp -n .env.example .env | true
 
-virtualenv: env
-	@if [ ! -d ".venv" ]; then \
-		$(PYTHON_BIN) -m pip install virtualenv --user; \
-		$(PYTHON_BIN) -m virtualenv .venv; \
-	fi
+venv: env
+	$(PYTHON_BIN) -m pip install virtualenv --user
+	$(PYTHON_BIN) -m virtualenv $(PROJECT_VENV)
 
-install: env virtualenv
+install: env venv
 	@( \
-		source .venv/bin/activate; \
+		source $(PROJECT_VENV)/bin/activate; \
 		python -m pip install -r requirements.txt; \
 	)
 
@@ -25,10 +24,10 @@ nopyc:
 	find . -name __pycache__ | xargs rm -rf || true
 
 clean: nopyc
-	rm -rf .venv
+	rm -rf $(PROJECT_VENV)
 
-test: env virtualenv
+test: install
 	@( \
-		source .venv/bin/activate; \
+		source $(PROJECT_VENV)/bin/activate; \
 		python -m unittest discover; \
 	)
