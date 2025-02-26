@@ -3,7 +3,8 @@ name: "CI Tests"
 on:
   push:
     branches: [ main, develop ]
-  pull_request_target:
+  pull_request:
+    branches: [ main, develop ]
   schedule:
     - cron: "0 18 * * 1"
   workflow_dispatch:
