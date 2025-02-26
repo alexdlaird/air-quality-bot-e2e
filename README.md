@@ -1,4 +1,5 @@
 ![Python Versions](https://img.shields.io/badge/python-%203.10%20|%203.11%20-blue)
+[![CI Tests](https://img.shields.io/github/actions/workflow/status/alexdlaird/air-quality-bot-e2e/ci.yml)](https://github.com/alexdlaird/air-quality-bot-e2e/actions/workflows/ci.yml)
 
 # Air Quality Bot E2E Tests
 
