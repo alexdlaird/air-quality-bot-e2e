@@ -17,6 +17,8 @@ jobs:
     name: "CI Tests"
 
     env:
+      FORCE_COLOR: 1
+      PYTHONDONTWRITEBYTECODE: 1
       AIR_QUALITY_BOT_PHONE_NUMBER: ${{ secrets.AIR_QUALITY_BOT_PHONE_NUMBER }}
       TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
       TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
